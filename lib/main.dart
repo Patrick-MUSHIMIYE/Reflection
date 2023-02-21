@@ -36,11 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("GRID VIEW && DATA VIEW", textAlign: TextAlign.center),
         ),
+        // container widget created and its properties
         body: Container(
             margin: EdgeInsets.all(20),
             width: 400,
             height: 700,
             color: Colors.blue,
+            // listView created inside the container to help us scroll up or down
             child: ListView(children: [
               Column(children: [
                 Text("ALU YEAR 3 COMPUTER SCIENCE COURSES",
@@ -49,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center),
+                    // sizedBox widget used to give space betwen element/ text
                 SizedBox(
                     height: 400,
                     child: Center(
@@ -105,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(height: 20),
                 DataTable(
                     columnSpacing: 10,
-                    // sortColumnIndex: 1,
+                    sortColumnIndex: 1,
                     border: TableBorder(
                         top: BorderSide(width: 1),
                         bottom: BorderSide(width: 1),
@@ -157,7 +160,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             textAlign: TextAlign.center)),
                       ])
                     ])
-              ])
-            ])));
+              ], 
+            )
+            ])
+            ));
   }
 }
